@@ -1,0 +1,17 @@
+<div class="container" *ngIf="!isLoading">
+    <p>This listing has been viewed {{ listing.views }} times.</p>
+    <a routerLink="/listings">
+        <button class="btn btn-dark m-2">Back</button>
+    </a>
+
+    <h2 class="mt-5">{{ listing.name}}</h2>
+    <p>{{ listing.description}}</p>
+    <p>${{ listing.price}}</p>
+    <a routerLink="/contact/{{listing.id}}">
+        <button class="btn btn-success">Contact Seller</button>
+    </a>
+</div>
+
+<div class="spinner-border text-success" role="status" *ngIf="isLoading">
+    <span class="visually-hidden">Loading...</span>
+</div>

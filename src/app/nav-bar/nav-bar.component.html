@@ -1,0 +1,34 @@
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+  <a routerLink="/listings" class="navbar-brand">
+    <h1>Listing App</h1>
+  </a>
+
+  <a routerLink="/listings">
+    <a class="nav-link">HOME</a>
+  </a>
+
+  <a routerLink="">
+    <a class="nav-link">ABOUT</a>
+  </a>
+
+  <a routerLink="/my-listings">
+    <a class="nav-link">MY LISTINGS</a>
+  </a>
+  <!-- SEARCH FORM -->
+  <form class="d-flex">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
+  <div *ngIf="(auth.user | async)">
+    <button (click)="signOutClicked()" class="btn btn-primary mx-4">SIGNOUT</button>
+</div>
+  <div *ngIf="!(auth.user | async)">
+    <button (click)="signInClicked()" class="btn btn-primary mx-4">SIGNIN</button>
+</div>
+</div>

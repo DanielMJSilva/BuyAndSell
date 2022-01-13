@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Send the seller a message:</h3>
+  <div class="">
+    <label class="label" for="email">
+      Your email address:
+      <input name="email" [(ngModel)]="email" />
+    </label>
+  </div>
+  <div class="mt-3">
+    <label for="message">
+      <textarea
+        name="message"
+        rows="5"
+        cols="42"
+        [(ngModel)]="message"
+      ></textarea>
+    </label>
+  </div>
+  <button (click)="sendMessage()" class="btn btn-success">Send</button>
+</div>

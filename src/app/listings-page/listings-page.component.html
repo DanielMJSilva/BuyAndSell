@@ -1,0 +1,7 @@
+<div class="container mt-5">
+  <div class="list-group" *ngFor="let listing of listings">
+    <a routerLink="/listings/{{ listing.id }}" class="list-group-item">
+      <h3>{{ listing.name }} - ${{ listing.price }}</h3>
+    </a>
+  </div>
+</div>
